@@ -51,9 +51,80 @@ Avatar Layer
 ---
 
 ## Project Structure
+belearn/
+│
+├── manage.py
+├── requirements.txt
+├── README.md
+│
+├── belearn/
+│ ├── settings/
+│ ├── urls.py
+│ ├── asgi.py
+│ └── wsgi.py
+│
+├── apps/
+│ ├── accounts/
+│ ├── courses/
+│ ├── lessons/
+│ ├── avatars/
+│ └── progress/
+│
+├── static/
+└── media/
+
+git clone https://github.com/your-username/belearn.git
+
+cd belearn
 
 
+### 2. Create and activate virtual environment
 
+
+python -m venv venv
+venv\Scripts\activate
+
+
+### 3. Install dependencies
+
+
+pip install -r requirements.txt
+
+
+### 4. Run database migrations
+
+
+python manage.py migrate
+
+
+### 5. Create an admin user
+
+
+python manage.py createsuperuser
+
+
+### 6. Run the development server
+
+
+python manage.py runserver
+
+
+Open your browser and visit:
+
+
+http://127.0.0.1:8000/
+
+
+---
+
+## Environment Configuration
+
+Create a `.env` file in the project root:
+
+
+DEBUG=True
+SECRET_KEY=your-secret-key
+DATABASE_URL=postgres://user:password@localhost:5432/belearn
 
 ---
 
